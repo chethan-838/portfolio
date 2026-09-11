@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        .contact-section {
+            min-height: 100vh;
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* Left Side */
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 span {
+            color: #007bff;
+        }
+
+        .contact-info > p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .contact-item p {
+            color: #555;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Right Side Form */
+        .contact-form {
+            flex: 1;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .contact-section {
+                padding: 60px 5%;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info h2 {
+                font-size: 34px;
+            }
+
+            .contact-form {
+                width: 100%;
+            }
+        }
+
+        /*========================Particle background===============*/
+
+  
+.particle {
+
+    position: fixed;
+
+    width: 3px;
+
+    height: 3px;
+
+    background: #60a5fa;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    box-shadow:
+        0 0 10px #008cff;
+
+    animation:
+        particleMove 10s linear infinite;
+}
+
+@keyframes particleMove {
+
+    0% {
+
+        transform:
+            translateY(100vh)
+            translateX(0);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-10vh)
+            translateX(100px);
+
+        opacity: 0;
+    }
+}
+
+/* =====================================================
+   PROFESSIONAL CONTACT PAGE ANIMATIONS
+   ===================================================== */
+
+/* ---------- Page entrance ---------- */
+
+body {
+    animation: pageFade 0.8s ease-out;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ---------- Contact section ---------- */
+
+.contact-section {
+    overflow: hidden;
+}
+
+
+/* ---------- Left side entrance ---------- */
+
+.contact-info {
+    animation: contactLeft 0.9s ease-out;
+}
+
+@keyframes contactLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ---------- Contact heading ---------- */
+
+.contact-info h2 {
+    animation: headingReveal 0.8s ease-out 0.2s both;
+}
+
+@keyframes headingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Contact paragraph ---------- */
+
+.contact-info > p {
+    animation: paragraphReveal 0.8s ease-out 0.35s both;
+}
+
+@keyframes paragraphReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Contact items ---------- */
+
+.contact-item {
+    opacity: 0;
+    animation: itemReveal 0.7s ease-out forwards;
+}
+
+.contact-item:nth-child(1) {
+    animation-delay: 0.45s;
+}
+
+.contact-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.contact-item:nth-child(3) {
+    animation-delay: 0.75s;
+}
+
+@keyframes itemReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ---------- Contact icons ---------- */
+
+.contact-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.12) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.35);
+}
+
+
+/* ---------- Social links ---------- */
+
+.social-links {
+    animation: socialReveal 0.8s ease-out 0.9s both;
+}
+
+@keyframes socialReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-links a {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+
+/* =====================================================
+   FORM ANIMATIONS
+   ===================================================== */
+
+.contact-form {
+    animation: formReveal 0.9s ease-out 0.2s both;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+@keyframes formReveal {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Form card hover */
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12),
+        0 0 25px rgba(0, 123, 255, 0.08);
+}
+
+
+/* ---------- Form heading ---------- */
+
+.contact-form h3 {
+    animation: formHeading 0.8s ease-out 0.4s both;
+}
+
+@keyframes formHeading {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Input animation ---------- */
+
+.contact-form input,
+.contact-form textarea {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Input focus */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 18px rgba(0, 123, 255, 0.12),
+        0 0 0 3px rgba(0, 123, 255, 0.08);
+}
+
+
+/* ---------- Placeholder animation ---------- */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    transform: translateX(5px);
+    opacity: 0.6;
+}
+
+
+/* ---------- Send button ---------- */
+
+.contact-form button {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Button hover */
+
+.contact-form button:hover {
+    background: #0056b3;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+
+/* Button press */
+
+.contact-form button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+/* ---------- Button shine effect ---------- */
+
+.contact-form button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+.contact-form button:hover::before {
+    left: 130%;
+}
+
+
+/* ================= MOVING PARTICLES ================= */
+
+.particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 4px;
+
+    background: #38bdf8;
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    /* IMPORTANT */
+    z-index: -1;
+
+    box-shadow:
+        0 0 8px #38bdf8,
+        0 0 16px #38bdf8;
+
+    animation: particleMove 8s linear infinite;
+}
+
+
+/* Moving from bottom to top */
+
+@keyframes particleMove {
+
+    0% {
+        transform: translateY(110vh) translateX(0) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(50px) scale(1);
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh) translateX(100px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    .contact-info,
+    .contact-form {
+        animation-duration: 0.7s;
+    }
+
+    .contact-form:hover {
+        transform: none;
+    }
+}
+
+
+/* ---------- Reduce motion for accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="particle" style="right:10%; animation-delay:0s;"></div>
+<div class="particle" style="left:25%; animation-delay:1s;"></div>
+<div class="particle" style="left:40%; animation-delay:2s;"></div>
+<div class="particle" style="right:55%; animation-delay:3s;"></div>
+<div class="particle" style="left:70%; animation-delay:4s;"></div>
+<div class="particle" style="bottom:85%; animation-delay:5s;"></div>
+<div class="particle" style="left:95%; animation-delay:6s;"></div>
+
+    <section id="contact" class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+
+                <h2>Contact <span>Me</span></h2>
+
+                <p>
+                    I'd love to hear from you. Feel free to reach out
+                    for job opportunities, projects, or collaboration.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>chethangn838@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 8073926547</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bengaluru, India</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-links">
+
+                    <a href="https://www.linkedin.com/in/chethan098/" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/chethan-838" target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Contact Form -->
+            <form class="contact-form" action="https://formspree.io/f/myeywyyp" method="POST">
+
+                <h3>Send Me a Message</h3>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    name="Message"
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
