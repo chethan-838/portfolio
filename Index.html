@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Chethan G N - BSc Graduate and Python Full Stack Developer">
+
+    <title>Chethan G N | Python Full Stack Developer</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ================= CSS ================= -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+           
+            --white: #ffffff;
+            --text: #14161c;
+            --muted: #687080;
+            --border: #e5e7ec;
+            --background: #f7f8fc;
+            --primary: #5b4bdb;
+            --primary-dark: #4334b5;
+
+            --soft: #eeecff;
+
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+                
+            font-family: "Inter", sans-serif;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            line-height: 1.7;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1120px;
+
+            margin: auto;
+
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(247,248,252,0.95);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .navbar {
+
+            width: 90%;
+
+            max-width: 1120px;
+
+            min-height: 72px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-size: 1.5rem;
+
+            font-weight: 800;
+
+        }
+
+
+        .logo span {
+
+            color: var(--primary);
+
+        }
+
+
+        .nav-links {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 28px;
+
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--primary);
+
+        }
+
+
+        .menu-btn {
+
+            display:contents;
+
+            border: none;
+
+            background: none;
+
+            font-size: 1.7rem;
+
+            cursor: pointer;
+
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            min-height: 90vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 90px 0;
+
+        }
+
+
+        .hero-content {
+
+            width: 90%;
+
+            max-width: 1120px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.3fr 0.7fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .small-title {
+
+            color: var(--primary);
+
+            font-size: 0.78rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(2.7rem, 6vw, 5rem);
+
+            line-height: 1.05;
+
+            letter-spacing: -0.06em;
+
+            margin: 18px 0 25px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--primary);
+
+        }
+
+
+        .hero-description {
+
+            max-width: 680px;
+
+            color: var(--muted);
+
+            font-size: 1.05rem;
+
+        }
+
+
+        /* ================= BUTTONS ================= */
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+            margin-top: 32px;
+
+        }
+
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 12px 18px;
+
+            border-radius: 50px;
+
+            font-weight: 700;
+
+            border: 1px solid var(--border);
+
+            transition: 0.25s;
+
+        }
+
+
+        .btn:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+ /*===============primary button==================*/
+.primary {
+  position: relative;
+  padding: 10px 18px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+}
+
+.primary:active {
+  transform: scale(0.96);
+}
+
+.primary:before,
+.primary:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.primary:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.primary:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+        .secondary {
+
+            background: var(--white);
+
+        }
+
+
+        /* From Uiverse.io by mi-series */ 
+.teritary {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40B3A2;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.teritary:hover {
+  opacity: .95;
+}
+
+.teritary .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
+
+        .social-links {
+
+            display: flex;
+
+            gap: 22px;
+
+            margin-top: 24px;
+
+            color: var(--muted);
+
+            font-weight: 600;
+
+        }
+
+
+        .social-links a:hover {
+
+            color: var(--primary);
+
+        }
+
+
+        /* ================= HERO CARD ================= */
+
+        .hero-card {
+
+            background: var(--white);
+
+            padding: 35px;
+
+            border-radius: 28px;
+
+            border: 1px solid var(--border);
+
+            text-align: center;
+
+            box-shadow: 0 20px 60px rgba(20,25,50,0.08);
+
+        }
+
+
+        .profile-circle {
+
+            width: 150px;
+
+            height: 150px;
+
+            margin: auto;
+
+            margin-bottom: 25px;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--soft);
+
+            color: var(--primary);
+
+            font-size: 2.2rem;
+
+            font-weight: 800;
+
+        }
+
+
+        .hero-card p {
+
+            color: var(--muted);
+
+            margin: 7px 0 25px;
+
+        }
+
+
+        .tech-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 8px;
+
+        }
+
+
+        .tech-list span,
+        .tags span {
+
+            padding: 6px 11px;
+
+            border-radius: 50px;
+
+            background: var(--soft);
+
+            color: var(--primary-dark);
+
+            font-size: 0.75rem;
+
+            font-weight: 700;
+
+        }
+
+
+        /* ================= SECTIONS ================= */
+
+        .section {
+
+            padding: 100px 0;
+
+        }
+
+
+        .skills-section,
+        .education-section {
+            
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .section-label {
+
+            color: var(--primary);
+
+            font-size: 0.78rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.12em;
+
+        }
+
+
+        .section h2 {
+
+            max-width: 800px;
+
+            font-size: clamp(2rem,4vw,3.1rem);
+
+            line-height: 1.15;
+
+            letter-spacing: -0.05em;
+
+            margin: 12px 0 35px;
+
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-content {
+
+            max-width: 820px;
+
+        }
+
+
+        .about-content p {
+
+            color: var(--muted);
+
+            margin-bottom: 18px;
+
+            font-size: 1.02rem;
+
+        }
+
+
+        .about-content strong {
+
+            color: var(--text);
+
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .skill-card {
+
+            padding: 25px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            transition: 0.25s;
+
+            backdrop-filter: blur(10px);
+            
+            background-color: rgba(247, 251, 252, 0.404);
+
+        }
+
+
+        .skill-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 15px 35px rgba(18, 18, 19, 0.07);
+
+        }
+
+
+        .skill-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            display: grid;
+
+            place-items: center;
+
+            margin-bottom: 17px;
+
+            background: var(--soft);
+
+            color: var(--primary);
+
+            border-radius: 13px;
+
+            font-weight: 800;
+
+        }
+
+
+        .skill-card h3 {
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .skill-card p {
+
+            color: var(--muted);
+
+            font-size: 0.88rem;
+
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .projects-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .project-card {
+
+            background: var(--white);
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            min-height: 330px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: 0.25s;
+
+        }
+
+
+        .project-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 20px 50px rgba(25,30,60,0.09);
+
+        }
+
+
+        .project-number {
+
+            color: var(--primary);
+
+            font-weight: 800;
+
+            font-size: 0.8rem;
+
+        }
+
+
+        .project-card h3 {
+
+            font-size: 1.3rem;
+
+            margin: 20px 0 10px;
+
+        }
+
+
+        .project-card p {
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+        }
+
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .project-link {
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+            margin-top: auto;
+
+            padding-top: 25px;
+
+        }
+
+
+        .project-link:hover {
+
+            color: var(--primary-dark);
+
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .timeline {
+
+            max-width: 800px;
+
+            border-left: 2px solid var(--border);
+
+            padding-left: 30px;
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding-bottom: 40px;
+
+        }
+
+
+        .timeline-item:last-child {
+
+            padding-bottom: 0;
+
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            width: 13px;
+
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            left: -37px;
+
+            top: 8px;
+
+            box-shadow: 0 0 0 5px var(--soft);
+
+        }
+
+
+        .timeline-number {
+
+            color: var(--primary);
+
+            font-size: 0.75rem;
+
+            font-weight: 800;
+
+        }
+
+
+        .timeline-item h3 {
+
+            margin: 6px 0;
+
+        }
+
+
+        .timeline-item p {
+
+            color: var(--muted);
+
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
+
+            background: var(--soft);
+
+            border: 1px solid var(--border);
+
+            border-radius: 28px;
+
+            padding: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+
+        .contact-box h2 {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact-box p {
+
+            color: var(--muted);
+
+        }
+
+
+        .contact-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            border-top: 1px solid var(--border);
+
+            padding: 28px 0;
+
+        }
+
+
+        .footer-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: var(--muted);
+
+            font-size: 0.85rem;
+
+        }
+
+
+        /* ================= TOP BUTTON ================= */
+
+        .top-btn {
+
+            position: fixed;
+
+            right: 22px;
+
+            bottom: 22px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            color: white;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition: 0.25s;
+
+        }
+
+
+        .top-btn.show {
+
+            opacity: 1;
+
+            pointer-events: auto;
+
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width:850px) {
+
+            .hero-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .hero-card {
+
+                max-width: 430px;
+
+            }
+
+            .skills-grid,
+            .projects-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .contact-box {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+
+        @media (max-width:650px) {
+
+            .menu-btn {
+
+                display: block;
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 70px;
+
+                left: 5%;
+
+                right: 5%;
+
+                padding: 20px;
+
+                background: var(--white);
+
+                border: 1px solid var(--border);
+
+                border-radius: 18px;
+
+                flex-direction: column;
+
+                gap: 14px;
+
+            }
+
+
+            .nav-links.active {
+
+                display: flex;
+
+            }
+
+
+            .hero {
+
+                padding: 70px 0;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 2.7rem;
+
+            }
+
+
+            .section {
+
+                padding: 70px 0;
+
+            }
+
+
+            .skills-grid,
+            .projects-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contact-box {
+
+                padding: 30px 25px;
+
+            }
+
+
+            .footer-content {
+
+                flex-direction: column;
+
+                gap: 5px;
+
+            }
+
+        }
+
+
+        /* Education Section */
+
+.education-container {
+    max-width: 900px;
+    margin: auto;
+    
+}
+
+.education-card {
+    background: #1e293b;
+    border-left: 5px solid #38bdf8;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+.education-card h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.education-card h4 {
+    color: #38bdf8;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+/*========================Particle background===============*/
+
+  
+.particle {
+
+    position: fixed;
+
+    width: 3px;
+
+    height: 3px;
+
+    background: #60a5fa;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    box-shadow:
+        0 0 10px #008cff;
+
+    animation:
+        particleMove 10s linear infinite,
+
+        particleGlow 2s ease-in-out 
+        infinite alternate;
+}
+
+@keyframes particleMove {
+
+    0% {
+
+        transform:
+            translateY(100vh)
+            translateX(0);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-10vh)
+            translateX(100px);
+
+        opacity: 0;
+    }
+}
+
+/* =====================================================
+   PORTFOLIO ANIMATIONS
+   ===================================================== */
+
+/* ---------- Page entrance ---------- */
+
+body {
+    animation: pageLoad 2s ease-out;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ---------- Navbar animation ---------- */
+
+header {
+    animation: navSlide 2s ease-out;
+}
+
+@keyframes navSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Logo hover ---------- */
+
+.logo {
+    transition: 2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+/* ---------- Navbar links ---------- */
+
+.nav-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ---------- Hero animation ---------- */
+
+.hero-text {
+    animation: heroText 3s ease-out;
+}
+
+@keyframes heroText {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ---------- Small title ---------- */
+
+.small-title {
+    animation: fadeIn 1s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ---------- Hero heading ---------- */
+
+.hero h1 {
+    animation: headingIn 1s ease-out 0.3s both;
+}
+
+@keyframes headingIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Hero description ---------- */
+
+.hero-description {
+    animation: descriptionIn 1s ease-out 0.5s both;
+}
+
+@keyframes descriptionIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Buttons ---------- */
+
+.hero-buttons {
+    animation: buttonsIn 1s ease-out 0.7s both;
+}
+
+@keyframes buttonsIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+
+/* Primary button glow */
+
+.primary:hover,
+.teritary:hover {
+    box-shadow:
+        0 10px 25px rgba(91, 75, 219, 0.25),
+        0 0 20px rgba(91, 75, 219, 0.15);
+}
+
+
+/* Secondary button */
+
+.secondary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 25, 50, 0.12);
+}
+
+
+/* ---------- Social links ---------- */
+
+.social-links {
+    animation: socialIn 1s ease-out 0.9s both;
+}
+
+@keyframes socialIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-links a {
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ---------- Profile card ---------- */
+
+.hero-card {
+    animation: cardIn 1s ease-out 0.4s both;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(20, 25, 50, 0.13);
+}
+
+
+/* ---------- Profile image floating ---------- */
+
+.profile-circle {
+    animation: profileFloat 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+@keyframes profileFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.profile-circle:hover {
+    transform: scale(1.06);
+}
+
+
+/* ---------- Technology tags ---------- */
+
+.tech-list span,
+.tags span {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tech-list span:hover,
+.tags span:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 5px 15px rgba(91, 75, 219, 0.15);
+}
+
+
+/* ---------- Skill cards ---------- */
+
+.skill-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(20, 25, 50, 0.12);
+}
+
+
+/* Skill icon animation */
+
+.skill-icon {
+    transition: 0.35s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+
+/* ---------- Project cards ---------- */
+
+.project-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(25, 30, 60, 0.14);
+}
+
+
+/* Project number */
+
+.project-number {
+    transition: 0.3s ease;
+}
+
+.project-card:hover .project-number {
+    transform: translateX(5px);
+}
+
+
+/* Project link */
+
+.project-link {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.project-link:hover {
+    transform: translateX(6px);
+}
+
+
+/* ---------- Education ---------- */
+
+.education-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+
+/* Timeline dot pulse */
+
+.timeline-dot {
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 5px var(--soft);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 8px var(--soft),
+            0 0 20px rgba(91, 75, 219, 0.25);
+    }
+}
+
+
+/* ---------- Contact box ---------- */
+
+.contact-box {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(20, 25, 50, 0.10);
+}
+
+
+/* ---------- Top button ---------- */
+
+.top-btn {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.top-btn:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 0 20px rgba(91, 75, 219, 0.35);
+}
+
+
+/* ================= MOVING PARTICLES ================= */
+
+.particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 4px;
+
+    background: #38bdf8;
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    /* IMPORTANT */
+    z-index: -1;
+
+    box-shadow:
+        0 0 8px #38bdf8,
+        0 0 16px #38bdf8;
+
+    animation: particleMove 8s linear infinite;
+}
+
+
+/* Moving from bottom to top */
+
+@keyframes particleMove {
+
+    0% {
+        transform: translateY(110vh) translateX(0) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(50px) scale(1);
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh) translateX(100px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* ---------- Section heading ---------- */
+
+.section-label {
+    transition: 0.3s ease;
+}
+
+.section h2 {
+    transition: 0.3s ease;
+}
+
+
+/* ---------- Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+    </style>
+     
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+           
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+
+</head>
+
+
+<body>
+
+<div class="particle" style="right:10%; animation-delay:0s;"></div>
+<div class="particle" style="left:25%; animation-delay:1s;"></div>
+<div class="particle" style="left:40%; animation-delay:2s;"></div>
+<div class="particle" style="right:55%; animation-delay:3s;"></div>
+<div class="particle" style="left:70%; animation-delay:4s;"></div>
+<div class="particle" style="bottom:85%; animation-delay:5s;"></div>
+<div class="particle" style="left:95%; animation-delay:6s;"></div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            Chethan G N<span>.</span>
+        </a>
+
+        <a></a> <!-----------------------------shld add 3 bars for mobile---------------------------->
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+           
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+
+        <div class="hero-text">
+
+            <p class="small-title">
+                BSc Graduate • Python Full Stack Developer
+            </p>
+
+
+            <h1>
+
+                Building modern
+
+                <span>
+                    web applications
+                </span>
+
+                with technology.
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                I am Chethan G N, a BSc Biotechnology graduate
+                and Python Full Stack Developer with hands-on
+                experience in Python, Frontend, Backend, MySQL,
+                Linux &  Linux in AWS EC2.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="https://github.com/chethan-838?tab=repositories"
+                   class="btn primary">
+
+                    View My Projects
+
+                </a>
+
+
+                <a href="contactme.html"
+                   class="btn secondary">
+
+                    Contact Me
+
+                </a>
+
+                <a href="Chethan Resume.pdf" download class="btn teritary">
+                  <i class="animation"></i>
+                      Download Resume
+                 <i class="animation"></i>
+                </a>
+              </div>
+             
+             
+           
+
+
+            <div class="social-links">
+
+                <!-- CHANGE THESE LINKS -->
+
+                <a href="https://github.com/chethan-838"
+                   target="_blank">
+
+                    GitHub ↗
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/chethan098/"
+                   target="_blank">
+
+                    LinkedIn ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- PROFILE CARD -->
+
+        <div class="hero-card">
+
+            <div >
+                <img class="profile-circle" src="IMG_20260817_172528.jpg">
+
+            </div>
+
+
+            <h2>
+                Python Full Stack
+            </h2>
+
+
+            <p>
+                Frontend • Backend • Database • Cloud
+            </p>
+
+
+            <div class="tech-list">
+
+                <span>Python</span>
+
+                <span>Django</span>
+
+                <span>HTML</span>
+
+                <span>CSS</span>
+
+                <span>JavaScript</span>
+
+                <span>Bootstrap</span>
+
+                <span>React.js</span>
+
+                <span>MySQL</span>
+
+                <span>Linux</span>
+
+                <span>AWS</span>
+
+               
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section"
+         id="about">
+
+    <div class="container">
+
+        <p class="section-label">
+            ABOUT ME
+        </p>
+
+
+        <h2>
+
+            Combining my science background
+            with software development.
+
+        </h2>
+
+
+        <div class="about-content">
+
+            <p>
+
+                I have completed my
+                <strong>BSc in Biotechnology</strong>
+                and developed my technical expertise hands-on through
+                Python Full Stack Development and
+                Linux and AWS projects.
+
+            </p>
+
+
+            <p>
+
+                I have experience working with
+                <strong>
+                    Python, Django, MySQL, HTML, CSS,
+                    JavaScript, React.js, Bootstrap.
+                </strong>
+
+                to develop responsive and dynamic
+                web applications.
+
+            </p>
+
+
+            <p>
+
+                I also have experience in Linux administration,
+                cloud technologies and building reliable,
+                scalable and user-friendly applications.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section skills-section"
+         id="skills">
+
+    <div class="container">
+
+        <p class="section-label">
+            TECHNICAL SKILLS
+        </p>
+
+
+        <h2>
+            Technologies I work with
+        </h2>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Programming and backend application logic.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Django
+                </h3>
+
+                <p>
+                    Backend development and web applications.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ⚛️
+                </div>
+
+                <h3>
+                    React
+                </h3>
+
+                <p>
+                   Interactive and responsive interfaces.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    JS
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Dynamic and interactive web functionality.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                   
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" height="25" width="25" />
+                  
+                </div>
+
+                <h3>
+                    HTML5
+                </h3>
+
+                <p>
+                    Frontend structure
+                </p>
+
+            </div>
+
+            
+             
+            <div class="skill-card">
+                <div class="skill-icon">
+                  
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" height="25" width="25" />
+          
+                </div>
+
+                <h3>
+                    CSS3
+                </h3>
+
+                <p>
+                    Styling & responsive design
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                     
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" height="25" width="25" />
+          
+                </div>
+
+                <h3>
+                    MySQL
+                </h3>
+
+                <P>
+                    Database design & management
+                </P>
+
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" height="30" width="30" />
+          
+                </div>
+
+                <h3>
+                    LINUX/Ubuntu
+                </h3>
+
+                <p>
+                    Linux administration & development
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="30" width="30" />
+          
+                </div>
+
+                <h3>
+                    AWS EC2
+                </h3>
+
+                <p>
+                    AWS EC2 (Elastic compute cloud), Linux/ubuntu, AWS Networking, Cloud Deployment
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" height="30" width="30" />
+          
+                </div>
+
+                <h3>
+                    GitHub
+                </h3>
+
+                <p>
+                    Code hosting & project collaboration
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    
+                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" height="30" width="30" />
+          
+                </div>
+
+                <h3>
+                    Git
+                </h3>
+
+                <p>
+                    Version Control
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    &lt;/&gt;
+                </div>
+            </div>
+
+
+            
+
+<!--=============================Education==================================-->
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-container">
+
+        <div class="education-card">
+
+            <h3>Bachelor of Science (B.Sc.)</h3>
+
+            <h4>Biotechnology</h4>
+
+            <p><strong>Status:</strong> Completed</p>
+
+            <p>
+                Developed a strong foundation in scientific analysis,
+                problem-solving, and analytical thinking.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
